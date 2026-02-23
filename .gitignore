@@ -1,0 +1,21 @@
+# Prisma generado
+/src/generated/prisma
+
+# Dependencias
+node_modules/
+
+# Variables de entorno (nunca subir al repo)
+.env
+.env.local
+.env.production
+
+# TypeScript compilado
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
