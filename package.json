@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "npm install && npx prisma generate && tsc",
+    "build": "npx prisma generate && tsc && copyfiles -u 1 src/generated/**/* dist/generated",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,8 +29,9 @@
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.3.0",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.13",
-    "prisma": "^7.4.1",
+    "prisma": "^6.19.2",
     "ts-node": "^10.9.2"
   }
 }
