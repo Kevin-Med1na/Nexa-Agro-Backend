@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./docs/swagger";
 import authRoutes from "./routes/auth.routes";
+import productRoutes from "./routes/product.routes";
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 // ── Rutas ─────────────────────────────────────────────────
 app.use("/api/auth", authRoutes);
+app.use("/api/productos", productRoutes);
 
 // ── Documentación ─────────────────────────────────────────
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
